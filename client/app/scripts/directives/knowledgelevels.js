@@ -2,14 +2,15 @@
 	'use strict';
 
 	angular.module('clientApp')
-	  .directive('knowledgeLevels', knowledgeLevels);
-	
-	function knowledgeLevels() {
+	  .directive('knowledgelevels', knowledgelevels);
+
+	function knowledgelevels() {
+console.log('foi');
 	    return {
 			template: '<div></div>',
 			restrict: 'E',
 			scope: {
-				user: '='
+				knowledge: '=',
 			},
 			link: function postLink(scope, element, attrs) {
 				var nLevels = 11; // 0 ~ 10
@@ -19,11 +20,16 @@
 						 + '  <input type="radio" id="' + level + '" name="level" value="' + level + '" /> ' + level
 						 + '</label>';
 				}
+console.log('---x---x---x---');
 				for (var level = 0; level <= nLevels; level++) {
+console.log('level: [' + level + ']');
 					htmlText += appendKnowledgeLevel(level);
 				}
 				htmlText += '</div>';
+
 console.log(htmlText);
+console.log('---x---x---x---');
+
 				element.html(htmlText);
 			}
 	    }

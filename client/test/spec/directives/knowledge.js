@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Directive: knowledgeLevel', function () {
+describe('Directive: knowledge', function () {
 
   // load the directive's module
   beforeEach(module('clientApp'));
@@ -13,8 +13,8 @@ describe('Directive: knowledgeLevel', function () {
   }));
 
   it('should make hidden element visible', inject(function ($compile) {
-    element = angular.element('<knowledge-level></knowledge-level>');
+    element = angular.element('<knowledge></knowledge>');
     element = $compile(element)(scope);
-    expect(element.text()).toBe('this is the knowledgeLevel directive');
+    expect(element.text()).toBe('this is the knowledge directive');
   }));
 });
