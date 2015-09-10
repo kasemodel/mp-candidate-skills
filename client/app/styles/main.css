@@ -81,3 +81,12 @@ body {
     border-bottom: 0;
   }
 }
+
+.init-button {
+  border: solid 1px red;
+}
+
+.button {
+  border: solid 1px blue;
+  cursor: pointer;
+}

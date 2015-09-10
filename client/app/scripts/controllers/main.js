@@ -1,17 +1,17 @@
-'use strict';
+;(function() {
+	'use strict';
 
-/**
- * @ngdoc function
- * @name clientApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the clientApp
- */
-angular.module('clientApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+	angular.module('clientApp')
+	  .controller('MainCtrl', MainCtrl);
+
+	MainCtrl.$inject = ['$scope', '$location'];
+	function MainCtrl($scope, $location) {
+		var self = this;
+
+		self.welcomeMessage = 'Bem vindo a avalição de Candidato para a vaga de desenvolvedor.';
+
+		self.startEvaluation = function() {
+			$location.path('/evaluation');
+		}
+	}
+})();
