@@ -1,21 +1,12 @@
 <form role="form" ng-submit="evaluation.sendEvaluation()">
 <!--	<div class="row"> -->
-		<div class="input-group">
-			<span class="input-group-addon">Nome</span>
-			<input type="text" class="form-control" required="true" placeholder="Informe seu nome completo" ng-model="evaluation.user.name">
-		</div>
-<!--	</div> -->
-<!--	<div class="row"> -->
-		<div class="input-group">
-			<span class="input-group-addon">E-mail</span>
-			<input type="text" class="form-control" required placeholder="Informe seu email" ng-model="evaluation.user.email">
-		</div>
+		<user user="evaluation.user"></user>
 <!--	</div> -->
 
 
 		<div class="input-group">
 			<span class="input-group-addon">HTML</span>
-	        <knowledge-level></knowledge-level>
+	        <knowledge-levels></knowledge-level>
 	    </div>
 
 		<span class="input-group-btn">
