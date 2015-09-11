@@ -1,4 +1,4 @@
-package com.kasemodel.test.configuration;
+package com.kasemodel.test;
 
 import io.dropwizard.Configuration;
 
