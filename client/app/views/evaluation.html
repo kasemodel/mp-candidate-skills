@@ -1,4 +1,4 @@
-<form role="form" ng-submit="evaluation.sendEvaluation()">
+<form id="form" role="form" ng-submit="evaluation.sendEvaluation()">
 <!--	<div class="row"> -->
 		<user user="evaluation.user"></user>
 <!--	</div> -->
@@ -6,7 +6,7 @@
 
 		<div class="input-group">
 			<!--<span class="input-group-addon">HTML</span>-->
-	        <knowledges></knowledges>
+	        <knowledges user="evaluation.user"></knowledges>
 	    </div>
 
 		<span class="input-group-btn">

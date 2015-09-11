@@ -10,9 +10,6 @@
 			restrict: 'E',
 			scope: {
 				user: '='
-			},
-			link: function postLink(scope, element, attrs) {
-				//element.text('this is the user directive');
 			}
 	    }
 	}

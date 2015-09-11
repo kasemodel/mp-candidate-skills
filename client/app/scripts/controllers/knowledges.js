@@ -4,29 +4,37 @@
 	angular.module('clientApp')
 	  .controller('KnowledgesCtrl', KnowledgesCtrl);
 
-	function KnowledgesCtrl() {
+	KnowledgesCtrl.$inject = ['$scope'];
+	function KnowledgesCtrl($scope) {
 		var self = this;
 
-		self.knowledges = {
+		$scope.user.knowledges = {
 			html: {
+				name: 'html',
 				label: 'HTML'
 			},
 			css: {
+				name: 'css',
 				label: 'CSS'
 			},
 			javascript: {
+				name: 'javascript',
 				label: 'JavaScript'
 			},
 			python: {
+				name: 'python',
 				label: 'Python'
 			},
 			django: {
+				django: 'django',
 				label: 'Django'
 			},
 			devios: {
+				name: 'ios',
 				label: 'Desenvolvimento iOS'
 			},
 			devandroid: {
+				name: 'android',
 				label: 'Desenvolvimento Android'
 			}
 		}

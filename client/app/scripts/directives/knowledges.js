@@ -8,6 +8,9 @@
 		return {
 			templateUrl: '../views/knowledges.html',
 			restrict: 'E',
+			scope: {
+				user: '='
+			},
 			controller: 'KnowledgesCtrl',
 			controllerAs: 'knowledges',
 		}
