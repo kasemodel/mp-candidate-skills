@@ -1,5 +1,7 @@
 package com.kasemodel.test;
 
+import com.kasemodel.test.resources.UserResource;
+
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
