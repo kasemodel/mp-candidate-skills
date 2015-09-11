@@ -10,12 +10,12 @@ import com.kasemodel.test.vo.User;
 public class UserServiceImpl implements UserService {
 
 	private UserDao userDao;
-	
+
 	@Inject
 	public UserServiceImpl(@Dao UserDao userDao) {
 		this.userDao = userDao;
 	}
-	
+
 	@Override
 	public User save(User user) {
 		return userDao.save(user);

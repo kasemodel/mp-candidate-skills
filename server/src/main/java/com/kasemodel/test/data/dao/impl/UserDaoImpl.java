@@ -1,10 +1,10 @@
 package com.kasemodel.test.data.dao.impl;
 
 import com.kasemodel.test.data.MemoryDatabase;
-import com.kasemodel.test.data.dao.DefaultDao;
+import com.kasemodel.test.data.dao.UserDao;
 import com.kasemodel.test.vo.User;
 
-public class UserDaoImpl implements DefaultDao<User> {
+public class UserDaoImpl implements UserDao {
 
 	private MemoryDatabase database;
 	
