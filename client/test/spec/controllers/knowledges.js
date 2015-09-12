@@ -11,13 +11,16 @@ describe('Controller: KnowledgesCtrl', function () {
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
+    scope.user = {
+      'name':'Jonas',
+      'email':'jonas@gmail.com'
+    };
     KnowledgesCtrl = $controller('KnowledgesCtrl', {
       $scope: scope
-      // place here mocked dependencies
     });
   }));
 
   it('should knowledge is a added to the user', function () {
-    expect(KnowledgesCtrl.user.knowledges).toBeDefined();
+    expect(scope.user).toBeDefined();
   });
 });

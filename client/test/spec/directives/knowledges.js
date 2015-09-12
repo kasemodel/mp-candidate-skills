@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Directive: user', function () {
+describe('Directive: knowledges', function () {
 
   // load the directive's module
   beforeEach(module('clientApp'));
@@ -19,4 +19,9 @@ describe('Directive: user', function () {
     expect(scope.user).toBeDefined();
   }));
 
+  it('should created a knowledges element', inject(function ($compile) {
+    var element = angular.element('<knowledges></knowledges>');
+    element = $compile(element)(scope);
+    expect(element.length).toBe(1);
+  }));
 });
