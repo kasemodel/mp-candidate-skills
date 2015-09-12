@@ -6,10 +6,6 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.kasemodel.test.core.factory.MailFactory;
 import com.kasemodel.test.core.service.KnowledgeService;
 import com.kasemodel.test.core.service.MailService;
 import com.kasemodel.test.dto.MailToSendDTO;
@@ -20,7 +16,6 @@ import com.kasemodel.test.vo.User;
 
 public class KnowledgeServiceImpl implements KnowledgeService {
 
-	private static final Logger log = LoggerFactory.getLogger(KnowledgeServiceImpl.class);
 	private MailService mailService;
 
 	@Inject
@@ -30,18 +25,18 @@ public class KnowledgeServiceImpl implements KnowledgeService {
 
 	@Override
 	public void validateKnowledgesAndSendMail(User user) {
-		if (user.getKnowledges() != null) {
-			mailService.sendMail(getMailTypesToSend(user));
-		}
+		mailService.sendMail(getMailTypesToSend(user));
 	}
 
 	private List<MailToSendDTO> getMailTypesToSend(User user) {
 		List<MailToSendDTO> mailsToSend = new ArrayList<MailToSendDTO>();
 		ScoreDTO score = new ScoreDTO();
-		Iterator<Knowledge> knowledgeIterator = user.getKnowledges().iterator();
-		while (knowledgeIterator.hasNext()) {
-			Knowledge knowledge = knowledgeIterator.next();
-			validateScore(score, knowledge);
+		if (user.getKnowledges() != null) {
+			Iterator<Knowledge> knowledgeIterator = user.getKnowledges().iterator();
+			while (knowledgeIterator.hasNext()) {
+				Knowledge knowledge = knowledgeIterator.next();
+				validateScore(score, knowledge);
+			}
 		}
 		mailsToSend = MailUtils.getMailsToSend(user, score);
 		return mailsToSend;
@@ -76,10 +71,6 @@ public class KnowledgeServiceImpl implements KnowledgeService {
 	private void incrementFrontEndScore(ScoreDTO score, Integer value) {
 		if (validateMinumunScore(value))
 			score.incrementeFrontEnd();
-	}
-
-	private void sendMailToProcessedScores(User user, ScoreDTO score) {
-
 	}
 
 	private boolean validateMinumunScore(Integer value) {

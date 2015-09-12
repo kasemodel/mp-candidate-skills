@@ -4,10 +4,17 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ScoreDTO {
-	public static final List<String> BACKEND_KNOWLEDGES = Arrays.asList(new String[] { "python", "django" });
-	public static final List<String> FRONTEND_KNOWLEDGES = Arrays.asList(new String[] { "html", "css", "javascript" });
-	public static final List<String> MOBILE_KNOWLEDGES = Arrays.asList(new String[] { "ios", "android" });
+
+	public static final List<String> BACKEND_KNOWLEDGES;
+	public static final List<String> FRONTEND_KNOWLEDGES;
+	public static final List<String> MOBILE_KNOWLEDGES;
 	public static final Integer MINIMUM_SCORE = 7;
+
+	static {
+		BACKEND_KNOWLEDGES = Arrays.asList(new String[] { "python", "django" });
+		FRONTEND_KNOWLEDGES = Arrays.asList(new String[] { "html", "css", "javascript" });
+		MOBILE_KNOWLEDGES = Arrays.asList(new String[] { "ios", "android" });
+	}
 
 	private Integer scoreBackEnd;
 	private Integer scoreFrontEnd;
