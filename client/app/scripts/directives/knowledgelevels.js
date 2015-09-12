@@ -16,7 +16,6 @@
 				var htmlText = '<div class="btn-group" data-toggle="buttons">';
 				function appendKnowledgeLevel(level) {
 					var name = scope.knowledge.name + level;
-console.log('level: [' + level + '] name: [' + name + ']');
 					return '<label class="btn btn-default" ng-click="knowledge.value=' + level + '">'
 						 + '  <input type="radio" id="' + name + '" name="' + scope.knowledge.name + '" value="' + level + '"/> ' + level
 						 + '</label>';

@@ -34,8 +34,8 @@
 				$label: 'Desenvolvimento iOS'
 			},
 			devandroid: {
-				$name: 'android',
-				label: 'Desenvolvimento Android'
+				name: 'android',
+				$label: 'Desenvolvimento Android'
 			}
 		}
 	}

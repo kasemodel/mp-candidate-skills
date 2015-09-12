@@ -82,11 +82,34 @@ body {
   }
 }
 
-.init-button {
-  border: solid 1px red;
+/**/
+.cadastro-btn {
+  height: 50px;
+  width: 350px;
+  margin: -50px -175px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
 }
 
-.button {
-  border: solid 1px blue;
-  cursor: pointer;
+/****************************************************
+ Form
+****************************************************/
+/*
+.knowledges > .form-group > label {
+  padding-right: 15px;
+}
+*/
+
+.knowledges > .form-group.frontend > label {
+  width: 80px;
+}
+
+.knowledges > .form-group.backend > label {
+  width: 60px;
+}
+
+.knowledges > .form-group.mobile > label {
+  width: 200px;
 }

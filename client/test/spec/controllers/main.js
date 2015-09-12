@@ -17,7 +17,7 @@ describe('Controller: MainCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
+  it('should attach a message to the scope', function () {
     expect(MainCtrl.welcomeMessage).toBe('Bem vindo a avalição de Candidato para a vaga de desenvolvedor.');
   });
 });

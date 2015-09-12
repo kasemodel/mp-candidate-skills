@@ -17,7 +17,7 @@ describe('Controller: EvaluationCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(EvaluationCtrl.awesomeThings.length).toBe(3);
+  it('should user is a new object', function () {
+    expect(EvaluationCtrl.user).toBeDefined();
   });
 });

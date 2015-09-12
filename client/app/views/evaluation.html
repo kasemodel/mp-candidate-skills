@@ -1,16 +1,5 @@
 <form id="form" role="form" ng-submit="evaluation.sendEvaluation()">
-<!--	<div class="row"> -->
-		<user user="evaluation.user"></user>
-<!--	</div> -->
-
-
-		<div class="input-group">
-			<!--<span class="input-group-addon">HTML</span>-->
-	        <knowledges user="evaluation.user"></knowledges>
-	    </div>
-
-		<span class="input-group-btn">
-          <input type="submit" class="btn btn-primary" value="Send">
-        </span>
-
+	<user user="evaluation.user"></user>
+	<knowledges user="evaluation.user"></knowledges>
+	<input type="submit" class="btn btn-primary" value="Send">
 </form>
