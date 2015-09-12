@@ -28,7 +28,8 @@ public class KnowledgeServiceImpl implements KnowledgeService {
 		mailService.sendMail(getMailTypesToSend(user));
 	}
 
-	private List<MailToSendDTO> getMailTypesToSend(User user) {
+	@Override
+	public List<MailToSendDTO> getMailTypesToSend(User user) {
 		List<MailToSendDTO> mailsToSend = new ArrayList<MailToSendDTO>();
 		ScoreDTO score = new ScoreDTO();
 		if (user.getKnowledges() != null) {
