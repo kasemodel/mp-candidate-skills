@@ -11,30 +11,30 @@
 		$scope.user.knowledges = {
 			html: {
 				name: 'html',
-				label: 'HTML'
+				$label: 'HTML'
 			},
 			css: {
 				name: 'css',
-				label: 'CSS'
+				$label: 'CSS'
 			},
 			javascript: {
 				name: 'javascript',
-				label: 'JavaScript'
+				$label: 'JavaScript'
 			},
 			python: {
 				name: 'python',
-				label: 'Python'
+				$label: 'Python'
 			},
 			django: {
-				django: 'django',
-				label: 'Django'
+				name: 'django',
+				$label: 'Django'
 			},
 			devios: {
 				name: 'ios',
-				label: 'Desenvolvimento iOS'
+				$label: 'Desenvolvimento iOS'
 			},
 			devandroid: {
-				name: 'android',
+				$name: 'android',
 				label: 'Desenvolvimento Android'
 			}
 		}
