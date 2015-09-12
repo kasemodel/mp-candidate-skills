@@ -41,25 +41,25 @@ public class MailUtils {
 		return mails;
 	}
 
-	private static void validateMailToSendBackEnd(List<MailToSendDTO> mails, User user, ScoreDTO score) {
+	public static void validateMailToSendBackEnd(List<MailToSendDTO> mails, User user, ScoreDTO score) {
 		if (score.isBackEndScore()) {
 			mails.add(new MailToSendDTO(user, MailType.BACKEND));
 		}
 	}
 
-	private static void valiadteMailToSendFrontEnd(List<MailToSendDTO> mails, User user, ScoreDTO score) {
+	public static void valiadteMailToSendFrontEnd(List<MailToSendDTO> mails, User user, ScoreDTO score) {
 		if (score.isFrontEndScore()) {
 			mails.add(new MailToSendDTO(user, MailType.FRONTEND));
 		}
 	}
 
-	private static void valiadteMailToSendMobile(List<MailToSendDTO> mails, User user, ScoreDTO score) {
+	public static void valiadteMailToSendMobile(List<MailToSendDTO> mails, User user, ScoreDTO score) {
 		if (score.isMobileScore()) {
 			mails.add(new MailToSendDTO(user, MailType.MOBILE));
 		}
 	}
 
-	private static void validateMailToSendGeneric(List<MailToSendDTO> mails, User user, ScoreDTO score) {
+	public static void validateMailToSendGeneric(List<MailToSendDTO> mails, User user, ScoreDTO score) {
 		if (mails.isEmpty()) {
 			mails.add(new MailToSendDTO(user, MailType.GENERIC));
 		}
