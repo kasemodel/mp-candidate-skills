@@ -35,7 +35,8 @@ public class MailSenderRunner implements Runnable {
 			email.setMsg(MailUtils.getMailMessage(mailToSend));
 			email.addTo(mail);
 			email.send();
-			log.info("Email enviado para [" + mail + "]");
+			log.info(new StringBuffer().append("Email [").append(mailToSend.getMailType().name())
+					.append("] enviado para [").append(mail).append("]").toString());
 		} catch (EmailException e) {
 			log.error("Erro ao tentar enviar email.", e);
 		}

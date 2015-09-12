@@ -1,0 +1,34 @@
+{
+	"name":"Full Stack Dev",
+	"email":"fullstack@test.com",
+	"knowledges":[
+		{
+			"name":"html",
+			"value":9
+		},
+		{
+			"name":"css",
+			"value":7
+		},
+		{
+			"name":"javascript",
+			"value":8
+		},
+		{
+			"name":"python",
+			"value":7
+		},
+		{
+			"name":"django",
+			"value":8
+		},
+		{
+			"name":"ios",
+			"value":7
+		},
+		{
+			"name":"android",
+			"value":9
+		}
+	]
+}

@@ -5,6 +5,14 @@ public class Knowledge {
 	private String name;
 	private Integer value;
 
+	public Knowledge() {
+	}
+
+	public Knowledge(String name, Integer value) {
+		setName(name);
+		setValue(value);
+	}
+
 	public String getName() {
 		return name;
 	}
