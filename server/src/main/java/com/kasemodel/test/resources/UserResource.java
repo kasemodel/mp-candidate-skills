@@ -3,6 +3,7 @@ package com.kasemodel.test.resources;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.validation.Valid;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -26,7 +27,7 @@ public class UserResource {
 	}
 
 	@POST
-	public User save(User user) {
+	public User save(@Valid User user) {
 		User savedUser = null;
 		if (user != null) {
 			savedUser = userService.save(user);
