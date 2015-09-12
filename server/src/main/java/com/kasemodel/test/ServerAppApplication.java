@@ -1,5 +1,9 @@
 package com.kasemodel.test;
 
+import io.dropwizard.Application;
+import io.dropwizard.setup.Bootstrap;
+import io.dropwizard.setup.Environment;
+
 import java.util.EnumSet;
 
 import javax.servlet.DispatcherType;
@@ -10,10 +14,6 @@ import org.eclipse.jetty.servlets.CrossOriginFilter;
 import com.hubspot.dropwizard.guice.GuiceBundle;
 import com.kasemodel.test.core.injections.TestAppModule;
 import com.kasemodel.test.health.AppHealthCheck;
-
-import io.dropwizard.Application;
-import io.dropwizard.setup.Bootstrap;
-import io.dropwizard.setup.Environment;
 
 public class ServerAppApplication extends Application<ServerAppConfiguration> {
 
@@ -33,6 +33,7 @@ public class ServerAppApplication extends Application<ServerAppConfiguration> {
 		guiceBundle = GuiceBundle.<ServerAppConfiguration> newBuilder().addModule(new TestAppModule())
 				.enableAutoConfig(getClass().getPackage().getName()).setConfigClass(ServerAppConfiguration.class)
 				.build();
+		bootstrap.addBundle(guiceBundle);
 	}
 
 	@Override
