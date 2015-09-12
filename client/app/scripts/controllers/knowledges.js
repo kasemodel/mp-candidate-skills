@@ -8,7 +8,7 @@
 	function KnowledgesCtrl($scope) {
 		var self = this;
 
-		$scope.user.knowledges = {
+		self.knowledges = {
 			html: {
 				name: 'html',
 				$label: 'HTML'
@@ -38,5 +38,7 @@
 				$label: 'Desenvolvimento Android'
 			}
 		}
+
+		$scope.user.knowledges = self.knowledges;
 	}
 })();

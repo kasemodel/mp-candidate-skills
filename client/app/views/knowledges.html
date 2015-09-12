@@ -1,32 +1,32 @@
 <div class="knowledges">
-	<h3>Knowledges</h3>	
+	<h3>Seus conhecimentos</h3>	
 	<p>Avalie seu conhecimento de 0 a 10 nos seguintes itens (Campos opcionais):</p>
 	<div class="form-group frontend">
-		<label for="html">{{ user.knowledges.html.$label }}:</label>
-		<knowledgelevels id="html" knowledge="user.knowledges.html"></knowledgelevels>
+		<label>{{ knowledges.knowledges.html.$label }}:</label>
+		<knowledgelevels knowledge="user.knowledges.html"></knowledgelevels>
 	</div>
 	<div class="form-group frontend">
-		<label>{{ user.knowledges.css.$label }}:</label>
+		<label>{{ knowledges.knowledges.css.$label }}:</label>
 		<knowledgelevels knowledge="user.knowledges.css"></knowledgelevels>
 	</div>
 	<div class="form-group frontend">
-		<label>{{ user.knowledges.javascript.$label }}:</label>
-		<knowledgelevels knowledge="user.knowledges.css"></knowledgelevels>
+		<label>{{ knowledges.knowledges.javascript.$label }}:</label>
+		<knowledgelevels knowledge="user.knowledges.javascript"></knowledgelevels>
 	</div>
 	<div class="form-group backend">
-		<label>{{ user.knowledges.python.$label }}:</label>
+		<label>{{ knowledges.knowledges.python.$label }}:</label>
 		<knowledgelevels knowledge="user.knowledges.python"></knowledgelevels>
 	</div>
 	<div class="form-group backend">
-		<label>{{ user.knowledges.django.$label }}:</label>
+		<label>{{ knowledges.knowledges.django.$label }}:</label>
 		<knowledgelevels knowledge="user.knowledges.django"></knowledgelevels>
 	</div>
 	<div class="form-group mobile">
-		<label>{{ user.knowledges.devios.$label }}:</label>
+		<label>{{ knowledges.knowledges.devios.$label }}:</label>
 		<knowledgelevels knowledge="user.knowledges.devios"></knowledgelevels>
 	</div>
 	<div class="form-group mobile">
-		<label>{{ user.knowledges.devandroid.$label }}:</label>
+		<label>{{ knowledges.knowledges.devandroid.$label }}:</label>
 		<knowledgelevels knowledge="user.knowledges.devandroid"></knowledgelevels>
 	</div>
 </div>

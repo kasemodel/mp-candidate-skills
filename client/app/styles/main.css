@@ -82,7 +82,17 @@ body {
   }
 }
 
-/**/
+/****************************************************
+ Main page
+****************************************************/
+.alert {
+  display: none;
+}
+
+.init-button {
+  margin-top: 50px;
+}
+
 .cadastro-btn {
   height: 50px;
   width: 350px;
@@ -96,11 +106,10 @@ body {
 /****************************************************
  Form
 ****************************************************/
-/*
-.knowledges > .form-group > label {
-  padding-right: 15px;
+
+form {
+  margin-bottom: 50px;
 }
-*/
 
 .knowledges > .form-group.frontend > label {
   width: 80px;
