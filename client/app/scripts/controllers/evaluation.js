@@ -2,13 +2,10 @@
 	'use strict';
 
 	angular.module('clientApp')
-	  .controller('EvaluationCtrl', EvaluationCtrl);
-
-	EvaluationCtrl.$inject = ['$scope', 'evaluationService'];
-	function EvaluationCtrl($scope, evaluationService) {
+	  .controller('EvaluationCtrl', ['$scope', 'evaluationService', function ($scope, evaluationService) {
 		var self = this;
 
-		self.user = new Object();
+		self.user = {};
 
 		self.sendEvaluation = function() {
 			var knowledgeLevelsValues = $('#form').serializeArray();
@@ -22,7 +19,7 @@
 			});
 			evaluationService.submitUser(self.user)
 				.then(self.successCallback, self.errorCallback);
-		}
+		};
 
 		self.successCallback = function() {
 			$('.alert')
@@ -30,7 +27,7 @@
 				.addClass('alert-success')
 				.css('display', 'block')
 				.text('OK! Informações cadastradas com sucesso. Em breve você irá receber um email mais informações.');
-		}
+		};
 
 		self.errorCallback = function() {
 			$('.alert')
@@ -38,6 +35,6 @@
 				.addClass('alert-danger')
 				.css('display', 'block')
 				.text('OPS! Não foi possível cadastrar as informações. Por favor, tente novamente mais tarde.');
-		}
-	}
+		};
+	}]);
 })();
